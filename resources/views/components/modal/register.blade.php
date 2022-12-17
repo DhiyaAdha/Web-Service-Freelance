@@ -1,4 +1,4 @@
-<div class="hidden modal overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="registerModal" >
+<div class="hidden modal overflow-x-hidden overflow-y-visible fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="registerModal" >
     <div class="relative w-128 my-6 mx-auto max-w-md">
         <!--content-->
         <div class="border-0 rounded-xl shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">

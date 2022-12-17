@@ -39,6 +39,7 @@ class MyOrderController extends Controller
     public function index()
     {
         $orders = Order::where('freelancer_id', Auth::user()->id)->orderBy('created_at', 'desc')->get();
+        // dd($orders);
 
         return view('pages.dashboard.order.index', compact('orders'));
     }
@@ -72,9 +73,12 @@ class MyOrderController extends Controller
      */
     public function show(Order $order)
     {
+        // dd($order);
         $service = Service::where('id', $order['service_id'])->first();
-
+        // dd($service);
+        
         $thumbnail = ThumbnailService::where('service_id', $order['service_id'])->get();
+        // dd($thumbnail);
         $advantage_service = AdvantageService::where('service_id', $order['service_id'])->get();
         $advantage_user = AdvantageUser::where('service_id', $order['service_id'])->get();
         $tagline = Tagline::where('service_id', $order['service_id'])->get();

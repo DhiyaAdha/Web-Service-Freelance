@@ -45,13 +45,16 @@
                                     @forelse ($services as $key => $service)
 
                                         <tr class="text-gray-700 border-b">
+                                        
                                             <td class="w-2/6 px-1 py-5">
                                                 <div class="flex items-center text-sm">
                                                     <div class="relative w-10 h-10 mr-3 rounded-full md:block">
                                                         
                                                         {{-- validasi tingkat tinggi --}}
                                                         @if (isset($service->thumbnail_service[0]->thumbnail) != null)
-                                                            <img class="object-cover w-full h-full rounded" src="{{ url(Storage::url($service->thumbnail_service[0]->thumbnail)) }}" alt="thumbnail" loading="lazy" />
+                                                            <img class="object-cover w-full h-full rounded" 
+                                                            src="{{ url(Storage::url($service->thumbnail_service[0]->thumbnail)) }}" 
+                                                            alt="thumbnail" loading="lazy" />
                                                         @else
                                                             <svg class="object-cover w-full h-full rounded text-gray-300" fill="currentColor" viewBox="0 0 24 24">
                                                                 <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -59,11 +62,11 @@
                                                         @endif
                                                         <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                                                     </div>
-                                                    <div>
-                                                        <a href="{{ '#' }}" class="font-medium text-black">
-                                                            {{ $service->title ?? '' }}
-                                                        </a>
-                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <a href="{{ '#' }}" class="font-medium text-black">
+                                                        {{ $service->title ?? '' }}
+                                                    </a>
                                                 </div>
                                             </td>
                                             {{-- int page my service index 2 --}}

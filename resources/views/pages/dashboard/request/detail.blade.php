@@ -124,6 +124,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="px-1 py-4 text-right">
                                     <a href="{{ route('member.request.index') }}" type="button" class="inline-flex justify-center px-4 py-2 mr-4 text-sm font-medium text-gray-700 bg-white border border-gray-600 rounded-lg shadow-sm hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300" onclick="return confirm('Are you sure want to back? , Any changes you make will not be saved.')">
                                         Back
@@ -134,11 +135,12 @@
                                             Approve
                                         </a>
                                     @else
-                                        <a type="button" class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-lg shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" disabled>
+                                        <a type="button" class="inline-flex justify-center px-4 py-2 text-sm font-medium text-red-500 bg-white border border-transparent rounded-lg shadow-sm hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" disabled>
                                             Approve
                                         </a>
                                     @endif
                                 </div>
+                                
                             </div>
                         </form>
 

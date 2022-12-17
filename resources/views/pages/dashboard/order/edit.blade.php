@@ -98,6 +98,7 @@
                             @csrf
 
                             <div class="flex p-8 border border-gray-200 rounded-lg bg-serv-upload-bg h-128">
+                                
                                 <div class="m-auto text-center">
                                     <img src="{{ asset('/assets/images/services-file-icon.svg') }}" alt="" class="w-20 mx-auto">
                                     <h2 class="mt-8 mb-1 text-2xl font-semibold text-gray-700">

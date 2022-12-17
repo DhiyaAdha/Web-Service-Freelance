@@ -29,7 +29,6 @@
                             <p class="text-red-500 mb-3 text-sm">{{ $errors->first('email') }}</p>
                         @endif
                     </div>
-
                     <div>
                         <label class="block text-grey-darker text-sm mb-2" for="password">Password</label>
 

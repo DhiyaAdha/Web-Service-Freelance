@@ -18,8 +18,8 @@ class UsersTableSeeder extends Seeder
         $users = [
             [
                 'name'              => 'John Doe',
-                'email'             => 'john@mail.com',
-                'password'          => Hash::make('Admin@12345'),
+                'email'             => 'dhiya@mail.com',
+                'password'          => Hash::make('12345678'),
                 'remember_token'    => NULL,
                 'created_at'        => date('Y-m-d h:i:s'),
                 'updated_at'        => date('Y-m-d h:i:s'),

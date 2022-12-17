@@ -3,11 +3,15 @@
 namespace App\Http\Requests\Dashboard\Profile;
 
 use App\Models\User;
-use Illuminate\Foundation\Http\FormRequest;
-use Symfony\Component\HttpFoundaation\Response;
+
+//model
 use Illuminate\Validation\Rule;
 
-use Auth;
+// helper
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Http\FormRequest;
+
+use Symfony\Component\HttpFoundaation\Response;
 
 class UpdateProfileRequest extends FormRequest
 {

@@ -77,6 +77,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="p-6 mt-8 bg-white rounded-xl">
                         <div>
                             <h2 class="mb-1 text-xl font-semibold">
@@ -247,7 +248,7 @@
                                         </div>
                                     </td>
                                     <td class="w-1/2 px-1 py-5 text-xs text-right text-red-500">
-                                        @include('components/dashboard.rating')
+                                        @include('components.dashboard.rating')
                                     </td>
                                 </tr>
                                 <tr class="text-gray-700">
@@ -264,7 +265,7 @@
                                         </div>
                                     </td>
                                     <td class="w-1/2 px-1 py-5 text-xs text-right text-red-500">
-                                        @include('components/dashboard.rating')
+                                        @include('components.dashboard.rating')
                                     </td>
                                 </tr>
                                 <tr class="text-gray-700">
@@ -281,7 +282,7 @@
                                         </div>
                                     </td>
                                     <td class="w-1/2 px-1 py-5 text-xs text-right text-red-500">
-                                        @include('components/dashboard.rating')
+                                        @include('components.dashboard.rating')
                                     </td>
                                 </tr>
                                 <tr class="text-gray-700">
@@ -298,7 +299,7 @@
                                         </div>
                                     </td>
                                     <td class="w-1/2 px-1 py-5 text-xs text-right text-red-500">
-                                        @include('components/dashboard.rating')
+                                        @include('components.dashboard.rating')
                                     </td>
                                 </tr>
                                 <tr class="text-gray-700">
@@ -315,7 +316,7 @@
                                         </div>
                                     </td>
                                     <td class="w-1/2 px-1 py-5 text-xs text-right text-red-500">
-                                        @include('components/dashboard.rating')
+                                        @include('components.dashboard.rating')
                                     </td>
                                 </tr>
 

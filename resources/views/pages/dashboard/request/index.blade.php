@@ -60,6 +60,7 @@
                                                     </div>
                                                 </div>
                                             </td>
+
                                             <td class="w-2/6 px-1 py-5">
                                                 <div class="flex items-center text-sm">
                                                     <div class="relative w-10 h-10 mr-3 rounded-full md:block">
@@ -90,17 +91,21 @@
                                             <td class="px-1 py-5 text-sm">
                                                 {{ 'Rp '.number_format($order->service->price) ?? '' }}
                                             </td>
-                                            <td class="px-1 py-5 text-sm text-green-500
+                                            
+                                            <td class="px-1 py-5 text-sm  text-md">
                                                 @if($order->order_status_id == '1')
-                                                    {{ 'text-green-500' }}
+                                                <p class="text-sm text-green-500">{{ $order->order_status->name ?? '' }}</p>
                                                 @elseif($order->order_status_id == '2')
-                                                    {{ 'text-yellow-500' }}
+                                                <p class="text-sm text-yellow-500"> {{ $order->order_status->name ?? '' }}</p>
                                                 @elseif($order->order_status_id == '3')
-                                                    {{ 'text-red-500' }}
+                                                <p class="text-sm text-red-500">{{ $order->order_status->name ?? '' }}</p>
+                                                
+                                                @else
+                                                <p class="text-sm text-black-500"> {{ $order->order_status->name ?? '' }} </p>
                                                 @endif
-                                                text-md">
-                                                {{ $order->order_status->name ?? '' }}
+
                                             </td>
+                                            
                                             <td class="px-1 py-5 text-sm">
                                                 <a href="{{ route('member.request.show', $order->id) }}" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-email">
                                                     Details

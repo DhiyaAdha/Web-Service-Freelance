@@ -48,6 +48,7 @@
 
                                                 <label for="choose" class="px-3 py-2 ml-5 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Choose File</label>
 
+                                                {{-- label-input (tricky) --}}
                                                 <input type="file" accept="image/*" id="choose" name="photo" hidden>
 
                                                 <a href="{{ route('member.delete.photo.profile') }}" type="button" class="px-3 py-2 ml-5 text-sm font-medium leading-4 text-red-700 bg-transparent rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" onclick="return confirm('Are you sure want to delete your photo?')">
@@ -103,7 +104,7 @@
                                             @endif
                                         </div>
 
-                                        <div class="col-span-6">
+                                        <div class="col-span-6">    
                                             <label for="biography" class="block mb-3 font-medium text-gray-700 text-md">Biografi</label>
 
                                             <textarea placeholder="Enter your biography here.." type="text" name="biography" id="biography" autocomplete="biography" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" rows="4">{{ $user->detail_user->biography ?? '' }}</textarea>
@@ -118,7 +119,6 @@
 
                                             @forelse ($experience_user as $key => $item)
                                                 <input placeholder="More than 9 years of experience" type="text" name="{{ 'experience['.$item->id.']' }}" id="{{ 'experience['.$item->id.']' }}" autocomplete="{{ 'experience['.$item->id.']' }}" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value={{ $item->experience }}>
-
                                                 @if ($errors->has('experience['.$item->id.']'))
                                                     <p class="text-red-500 mb-3 text-sm">{{ $errors->first('experience') }}</p>
                                                 @endif
